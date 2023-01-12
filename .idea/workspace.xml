@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Fix queries">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/util/CustomerGeneratorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/util/CustomerGeneratorUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/test/java/com/psybergate/mentoring/transactions/jdbc/service/AtomicityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/test/java/com/psybergate/mentoring/transactions/jdbc/service/AtomicityTest.java" afterDir="false" />
+    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="More comments">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/util/CustomerGeneratorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/util/CustomerGeneratorUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +217,7 @@
       <workItem from="1671702198579" duration="26472000" />
       <workItem from="1672844836987" duration="1004000" />
       <workItem from="1672845868689" duration="47203000" />
-      <workItem from="1673419272640" duration="34441000" />
+      <workItem from="1673419272640" duration="35032000" />
     </task>
     <task id="LOCAL-00001" summary="Done with four tests in Spring">
       <created>1673439408886</created>
@@ -250,7 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673530351088</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix tests">
+      <created>1673532570759</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673532570759</updated>
+    </task>
+    <task id="LOCAL-00006" summary="More comments">
+      <created>1673532685457</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673532685457</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +283,8 @@
     <MESSAGE value="Done with JDBC programme" />
     <MESSAGE value="Done with tests" />
     <MESSAGE value="Fix queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix queries" />
+    <MESSAGE value="Fix tests" />
+    <MESSAGE value="More comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="More comments" />
   </component>
 </project>
