@@ -1,6 +1,7 @@
 package com.psybergate.mentoring.transactions.jdbc.util;
 
-import com.psybergate.mentoring.transactions.spring.dto.Customer;
+
+import com.psybergate.mentoring.transactions.jdbc.dto.Customer;
 
 public class CustomerGeneratorUtil {
 

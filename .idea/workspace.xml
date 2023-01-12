@@ -4,36 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC transactions/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/TransactionsInSpring.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/dto/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/dto/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/util/CustomerGeneratorUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/TransactionsInSpring.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/dto/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/CustomerAuditEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/CustomerEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/repository/CustomerAuditRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/util/CustomerGeneratorUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/AtomicityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Done with four tests in Spring">
+      <change afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/dto/CustomerAudit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/util/DateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/dto/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/dto/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/dto/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/dto/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/util/CustomerGeneratorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/util/CustomerGeneratorUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +62,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/RidwaanOmar/IdeaProjects/Transactions in Spring/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc",
+    "last_opened_file_path": "C:/Users/RidwaanOmar/IdeaProjects/config-repo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,11 +82,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.psybergate.mentoring.transactions.jdbc.util" />
       <recent name="com.psybergate.mentoring.transactions.spring.util" />
       <recent name="com.psybergate.knowledge_share.transactions.spring.entity" />
       <recent name="com.psybergate.knowledge_share.transactions.spring.repository" />
       <recent name="com.psybergate.knowledge_share.transactions.spring.dto" />
-      <recent name="com.psybergate.knowledge_share.transactions.spring" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\RidwaanOmar\IdeaProjects\Transactions in Spring\JDBC transactions\src\main\java\com\psybergate\mentoring\transactions\jdbc" />
@@ -244,11 +223,23 @@
       <workItem from="1671702198579" duration="26472000" />
       <workItem from="1672844836987" duration="1004000" />
       <workItem from="1672845868689" duration="47203000" />
-      <workItem from="1673419272640" duration="8463000" />
+      <workItem from="1673419272640" duration="27081000" />
     </task>
+    <task id="LOCAL-00001" summary="Done with four tests in Spring">
+      <created>1673439408886</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673439408886</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Done with four tests in Spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done with four tests in Spring" />
   </component>
 </project>

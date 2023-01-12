@@ -11,11 +11,19 @@ import java.time.LocalDateTime;
 @ToString
 public class BaseEntity {
 
-    private Long id;
-
     private LocalDateTime createdDate;
 
     private LocalDateTime lastModified;
+
+    public BaseEntity() {
+        setDateInfo();
+    }
+
+    public BaseEntity(final LocalDateTime createdDate,
+                      final LocalDateTime lastModified) {
+        this.createdDate = createdDate;
+        this.lastModified = lastModified;
+    }
 
     public void setDateInfo(){
         this.createdDate = createdDate != null ? createdDate : LocalDateTime.now();
