@@ -20,9 +20,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
 
-    public static final String CUSTOMER_INSERT_TEMPLATE = "insert into customer values (customer_id_seq.increment_by, '%s', '%s', '%s', '%s', '%s', '%s')";
+    public static final String CUSTOMER_INSERT_TEMPLATE = "insert into customer values (nextval('customer_id_seq'), '%s', '%s', '%s', '%s', '%s', '%s')";
 
-    public static final String AUDIT_INSERT_TEMPLATE = "insert into customer_audit values (customer_audit_id_seq.increment_by, '%s', '%s', '%s', '%s', '%s', '%s')";
+    public static final String AUDIT_INSERT_TEMPLATE = "insert into customer_audit values (nextval('customer_audit_id_seq'), '%s', '%s', '%s', '%s', '%s', '%s')";
 
     private static final String RETRIEVE_AUDIT_TEMPLATE = "select * from customer_audit where email = %s";
 

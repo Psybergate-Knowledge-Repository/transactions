@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Done with JDBC programme" />
+    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Done with tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +56,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/RidwaanOmar/IdeaProjects/config-repo",
+    "last_opened_file_path": "C:/Users/RidwaanOmar/IdeaProjects/Transactions in Spring/JDBC transactions/src/test/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,6 +83,7 @@
       <recent name="com.psybergate.knowledge_share.transactions.spring.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\RidwaanOmar\IdeaProjects\Transactions in Spring\JDBC transactions\src\test\java" />
       <recent name="C:\Users\RidwaanOmar\IdeaProjects\Transactions in Spring\JDBC transactions\src\main\java\com\psybergate\mentoring\transactions\jdbc" />
       <recent name="C:\Users\RidwaanOmar\IdeaProjects\Transactions in Spring\src\test" />
     </key>
@@ -96,32 +100,17 @@
       <recent name="com.psybergate.mentoring.transactions.jdbc.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AtomicityTest.transactionalFailureWithTransactionalDeclaration">
-    <configuration name="AtomicityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.AtomicityTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration (1)">
     <configuration name="AtomicityTest.transactionalFailureWithTransactionalDeclaration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.AtomicityTest" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.AtomicityTest" />
       <option name="METHOD_NAME" value="transactionalFailureWithTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -132,12 +121,12 @@
       <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.AtomicityTest" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.AtomicityTest" />
       <option name="METHOD_NAME" value="transactionalFailureWithoutTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -148,13 +137,29 @@
       <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.AtomicityTest" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.AtomicityTest" />
       <option name="METHOD_NAME" value="transactionalSuccessWithTransactionalDeclaration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.AtomicityTest" />
+      <option name="METHOD_NAME" value="transactionalSuccessWithoutTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,12 +169,12 @@
       <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.AtomicityTest" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.AtomicityTest" />
       <option name="METHOD_NAME" value="transactionalSuccessWithoutTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -191,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration (1)" />
         <item itemvalue="JUnit.AtomicityTest.transactionalFailureWithTransactionalDeclaration" />
         <item itemvalue="JUnit.AtomicityTest.transactionalFailureWithoutTransactionalDeclaration" />
         <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithTransactionalDeclaration" />
         <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration" />
-        <item itemvalue="JUnit.AtomicityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +219,7 @@
       <workItem from="1671702198579" duration="26472000" />
       <workItem from="1672844836987" duration="1004000" />
       <workItem from="1672845868689" duration="47203000" />
-      <workItem from="1673419272640" duration="27866000" />
+      <workItem from="1673419272640" duration="32244000" />
     </task>
     <task id="LOCAL-00001" summary="Done with four tests in Spring">
       <created>1673439408886</created>
@@ -230,15 +235,34 @@
       <option name="project" value="LOCAL" />
       <updated>1673525201071</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Done with tests">
+      <created>1673527243794</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673527243794</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Done with four tests in Spring" />
     <MESSAGE value="Done with JDBC programme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done with JDBC programme" />
+    <MESSAGE value="Done with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done with tests" />
   </component>
 </project>
