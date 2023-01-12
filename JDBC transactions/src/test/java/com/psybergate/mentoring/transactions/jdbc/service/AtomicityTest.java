@@ -69,7 +69,11 @@ public class AtomicityTest {
     @Test
     public void transactionalFailureWithTransactionalDeclaration() throws SQLException {
         final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
-        customerService.saveCustomerWithTransactionBoundary(generatedCustomer, true);
+        try {
+            customerService.saveCustomerWithTransactionBoundary(generatedCustomer, true);
+        } catch (Exception e) {
+            // Simulated failure
+        }
         List<CustomerAudit> customerAudits = customerService.findAuditsByCustomerEmail(generatedCustomer.getEmail());
         final Customer customer = customerService.findCustomerByEmail(generatedCustomer.getEmail());
         // Expecting nothing to be saved. The transaction should be rolled back.
