@@ -69,10 +69,14 @@ public class AtomicityTest {
     @Test
     public void transactionalFailureWithTransactionalDeclaration() {
         final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
-        customerService.saveCustomerWithTransactionBoundary(generatedCustomer, true);
+        try {
+            customerService.saveCustomerWithTransactionBoundary(generatedCustomer, true);
+        } catch (Exception e) {
+            //Simulated failure
+        }
         List<CustomerAuditEntity> customerAudits = customerService.findAuditsByCustomerEmail(generatedCustomer.getEmail());
         final CustomerEntity customer = customerService.findCustomerByEmail(generatedCustomer.getEmail());
-        // Expecting nothing to be saved. The transaction should be rolled back.
+        // Expecting nothing to be saved. The transaction should be rolled back. This is what we want. All or nothing
         if (!customerAudits.isEmpty() || customer != null) fail("customer or audit was saved");
         System.out.println(customerAudits);
         System.out.println(customer);
