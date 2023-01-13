@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Fix CustomerGeneratorUtil">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/CustomerServiceImpl.java" afterDir="false" />
+    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Add test for checked exceptions">
       <change beforePath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/AtomicityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/AtomicityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +217,7 @@
       <workItem from="1671702198579" duration="26472000" />
       <workItem from="1672844836987" duration="1004000" />
       <workItem from="1672845868689" duration="47203000" />
-      <workItem from="1673419272640" duration="43541000" />
+      <workItem from="1673419272640" duration="43911000" />
     </task>
     <task id="LOCAL-00001" summary="Done with four tests in Spring">
       <created>1673439408886</created>
@@ -271,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673533897543</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add test for checked exceptions">
+      <created>1673603821274</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673603821274</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +300,7 @@
     <MESSAGE value="Fix tests" />
     <MESSAGE value="More comments" />
     <MESSAGE value="Fix CustomerGeneratorUtil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix CustomerGeneratorUtil" />
+    <MESSAGE value="Add test for checked exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test for checked exceptions" />
   </component>
 </project>

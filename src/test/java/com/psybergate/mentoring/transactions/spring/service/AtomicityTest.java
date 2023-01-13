@@ -82,6 +82,7 @@ public class AtomicityTest {
         System.out.println(customer);
     }
 
+    /*Same outcome as transactionalFailureWithoutTransactionalDeclaration test*/
     @Test
     public void checkedExceptionThrownWithoutRollbackForDeclared(){
         final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
@@ -92,8 +93,9 @@ public class AtomicityTest {
         }
         List<CustomerAuditEntity> customerAudits = customerService.findAuditsByCustomerEmail(generatedCustomer.getEmail());
         final CustomerEntity customer = customerService.findCustomerByEmail(generatedCustomer.getEmail());
-        // Expecting nothing to be saved. The transaction should be rolled back. This is what we want. All or nothing
-        if (!customerAudits.isEmpty() || customer != null) fail("customer or audit was saved");
+        /*Expecting customer to be saved, but not audit. This is problematic and illustrates that
+         transactionality can be broken down by mishandling checked exceptions*/
+        if (!customerAudits.isEmpty() || customer == null) fail("customer was not saved or audit was saved");
         System.out.println(customerAudits);
         System.out.println(customer);
     }
