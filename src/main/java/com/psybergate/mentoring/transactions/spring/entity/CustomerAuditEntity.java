@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Table(name = "customer_audit")
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(callSuper = true)
+@ToString
 public class CustomerAuditEntity extends BaseEntity{
 
     @Column(name = "modified_by")

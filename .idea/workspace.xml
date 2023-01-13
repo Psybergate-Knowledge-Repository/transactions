@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Add test for checked exceptions">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/AtomicityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/AtomicityTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/AccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/TransactionsInSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/TransactionsInJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/util/CustomerGeneratorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/util/CustomerGeneratorUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/dto/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/dto/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/CustomerAuditEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/CustomerAuditEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/util/CustomerGeneratorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/util/CustomerGeneratorUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +107,7 @@
       <recent name="com.psybergate.mentoring.transactions.jdbc.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AtomicityTest.checkedExceptionThrownWithoutRollbackForDeclared">
+  <component name="RunManager" selected="JUnit.AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration">
     <configuration name="AtomicityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jdbc" />
       <extension name="coverage">
@@ -163,16 +171,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdbc" />
+    <configuration name="AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.AtomicityTest" />
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.AtomicityTest" />
       <option name="METHOD_NAME" value="transactionalSuccessWithoutTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -192,13 +200,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransactionsInJdbc" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="jdbc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.psybergate.mentoring.transactions.jdbc.TransactionsInJdbc" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AtomicityTest.checkedExceptionThrownWithoutRollbackForDeclared" />
+        <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration" />
         <item itemvalue="JUnit.AtomicityTest.transactionalFailureWithTransactionalDeclaration (1)" />
+        <item itemvalue="JUnit.AtomicityTest.checkedExceptionThrownWithoutRollbackForDeclared" />
         <item itemvalue="JUnit.AtomicityTest" />
         <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithTransactionalDeclaration (1)" />
-        <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +232,7 @@
       <workItem from="1671702198579" duration="26472000" />
       <workItem from="1672844836987" duration="1004000" />
       <workItem from="1672845868689" duration="47203000" />
-      <workItem from="1673419272640" duration="43911000" />
+      <workItem from="1673419272640" duration="53742000" />
     </task>
     <task id="LOCAL-00001" summary="Done with four tests in Spring">
       <created>1673439408886</created>
@@ -275,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673603821274</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add test for checked exceptions">
+      <created>1673604725330</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673604725330</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Bean;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-public class TransactionsInSpring {
+public class TransactionsInJdbc {
     public static void main(String[] args) {
-        SpringApplication.run(TransactionsInSpring.class);
+        SpringApplication.run(TransactionsInJdbc.class);
     }
 
     @Bean
