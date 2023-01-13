@@ -17,4 +17,6 @@ public interface CustomerService {
     List<CustomerAuditEntity> findAuditsByCustomerEmail(String email);
 
     CustomerEntity findCustomerByEmail(String email);
+
+    void saveCustomerWithCheckedExceptionThrown(Customer customer, final boolean simulateFailure) throws Exception;
 }

@@ -47,4 +47,14 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerEntity findCustomerByEmail(final String email) {
         return customerRepository.findByEmail(email);
     }
+
+    @Override
+    @Transactional
+    public void saveCustomerWithCheckedExceptionThrown(final Customer customer,
+                                                       final boolean simulateFailure) throws Exception {
+        final CustomerEntity customerEntity = new CustomerEntity(customer);
+        customerRepository.save(customerEntity);
+        if (simulateFailure) throw new Exception("Checked exception");
+        customerAuditRepository.save(new CustomerAuditEntity(customer.getName(), LocalDateTime.now(), customer.getEmail(), customer.toString()));
+    }
 }
