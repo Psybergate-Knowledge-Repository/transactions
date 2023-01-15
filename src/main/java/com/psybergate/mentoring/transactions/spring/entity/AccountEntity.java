@@ -1,5 +1,6 @@
 package com.psybergate.mentoring.transactions.spring.entity;
 
+import com.psybergate.mentoring.transactions.spring.dto.Account;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -15,6 +16,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @ToString
 public class AccountEntity extends BaseEntity {
+
     @Column(name = "account_number")
     private long accountNumber;
 
@@ -24,4 +26,11 @@ public class AccountEntity extends BaseEntity {
 
     @Column(name = "customer_id")
     private long customerId;
+
+    public AccountEntity(final Account account) {
+        accountNumber = account.getAccountNumber();
+        name = account.getName();
+        balance = account.getBalance();
+        customerId = account.getCustomerId();
+    }
 }

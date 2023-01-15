@@ -1,10 +1,11 @@
-package com.psybergate.mentoring.transactions.spring.service;
+package com.psybergate.mentoring.transactions.spring.service.impl;
 
 import com.psybergate.mentoring.transactions.spring.dto.Customer;
 import com.psybergate.mentoring.transactions.spring.entity.CustomerAuditEntity;
 import com.psybergate.mentoring.transactions.spring.entity.CustomerEntity;
 import com.psybergate.mentoring.transactions.spring.repository.CustomerAuditRepository;
 import com.psybergate.mentoring.transactions.spring.repository.CustomerRepository;
+import com.psybergate.mentoring.transactions.spring.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
