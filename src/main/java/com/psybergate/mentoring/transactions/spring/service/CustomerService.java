@@ -19,4 +19,11 @@ public interface CustomerService {
     CustomerEntity findCustomerByEmail(String email);
 
     void saveCustomerWithCheckedExceptionThrown(Customer customer, final boolean simulateFailure) throws Exception;
+
+    @Transactional
+    void saveCustomerWithUncheckedExceptionThrown(Customer customer,
+                                                  boolean simulateFailure) throws Exception;
+
+    long getRandomCustomerId();
+
 }

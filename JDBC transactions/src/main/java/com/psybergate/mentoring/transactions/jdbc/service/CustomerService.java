@@ -11,7 +11,6 @@ public interface CustomerService {
 
     void saveCustomerWithoutTransactionBoundary(Customer customer, final boolean simulateFailure) throws SQLException;
 
-    @Transactional
     void saveCustomerWithTransactionBoundary(Customer customer, final boolean simulateFailure) throws SQLException;
 
     List<CustomerAudit> findAuditsByCustomerEmail(String email) throws SQLException;

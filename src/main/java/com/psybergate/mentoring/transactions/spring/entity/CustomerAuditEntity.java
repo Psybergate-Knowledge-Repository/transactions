@@ -1,8 +1,6 @@
 package com.psybergate.mentoring.transactions.spring.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +12,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Getter
+@Setter
 public class CustomerAuditEntity extends BaseEntity{
 
     @Column(name = "modified_by")

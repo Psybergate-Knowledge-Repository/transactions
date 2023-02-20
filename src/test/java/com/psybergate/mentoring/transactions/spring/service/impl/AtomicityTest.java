@@ -1,9 +1,10 @@
-package com.psybergate.mentoring.transactions.spring.service;
+package com.psybergate.mentoring.transactions.spring.service.impl;
 
 import com.psybergate.mentoring.transactions.spring.dto.Customer;
 import com.psybergate.mentoring.transactions.spring.entity.CustomerAuditEntity;
 import com.psybergate.mentoring.transactions.spring.entity.CustomerEntity;
-import com.psybergate.mentoring.transactions.spring.util.CustomerGeneratorUtil;
+import com.psybergate.mentoring.transactions.spring.service.CustomerService;
+import com.psybergate.mentoring.transactions.spring.util.RandomGeneratorUtil;
 import lombok.NoArgsConstructor;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,7 +27,7 @@ public class AtomicityTest {
 
     @Test
     public void transactionalSuccessWithoutTransactionalDeclaration() {
-        final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
+        final Customer generatedCustomer = RandomGeneratorUtil.generateRandomCustomer();
         customerService.saveCustomerWithoutTransactionBoundary(generatedCustomer, false);
         List<CustomerAuditEntity> customerAudits = customerService.findAuditsByCustomerEmail(generatedCustomer.getEmail());
         final CustomerEntity customer = customerService.findCustomerByEmail(generatedCustomer.getEmail());
@@ -39,7 +40,7 @@ public class AtomicityTest {
     /*There is no difference between transactional success with or without transactional declaration*/
     @Test
     public void transactionalSuccessWithTransactionalDeclaration() {
-        final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
+        final Customer generatedCustomer = RandomGeneratorUtil.generateRandomCustomer();
         customerService.saveCustomerWithTransactionBoundary(generatedCustomer, false);
         List<CustomerAuditEntity> customerAudits = customerService.findAuditsByCustomerEmail(generatedCustomer.getEmail());
         final CustomerEntity customer = customerService.findCustomerByEmail(generatedCustomer.getEmail());
@@ -52,7 +53,7 @@ public class AtomicityTest {
     /*The difference becomes apparent when failure occurs after some DB statements*/
     @Test
     public void transactionalFailureWithoutTransactionalDeclaration() {
-        final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
+        final Customer generatedCustomer = RandomGeneratorUtil.generateRandomCustomer();
         try {
             customerService.saveCustomerWithoutTransactionBoundary(generatedCustomer, true);
         } catch (Exception e) {
@@ -68,7 +69,7 @@ public class AtomicityTest {
 
     @Test
     public void transactionalFailureWithTransactionalDeclaration() {
-        final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
+        final Customer generatedCustomer = RandomGeneratorUtil.generateRandomCustomer();
         try {
             customerService.saveCustomerWithTransactionBoundary(generatedCustomer, true);
         } catch (Exception e) {
@@ -85,7 +86,7 @@ public class AtomicityTest {
     /*Same outcome as transactionalFailureWithoutTransactionalDeclaration test*/
     @Test
     public void checkedExceptionThrownWithoutRollbackForDeclared(){
-        final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
+        final Customer generatedCustomer = RandomGeneratorUtil.generateRandomCustomer();
         try {
             customerService.saveCustomerWithCheckedExceptionThrown(generatedCustomer, true);
         } catch (Exception e) {

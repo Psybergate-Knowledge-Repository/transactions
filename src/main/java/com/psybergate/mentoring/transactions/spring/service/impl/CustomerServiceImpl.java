@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -25,7 +26,8 @@ public class CustomerServiceImpl implements CustomerService {
                                                        final boolean simulateFailure) {
         final CustomerEntity customerEntity = new CustomerEntity(customer);
         customerRepository.save(customerEntity);
-        if (simulateFailure) throw new RuntimeException("Simulated failure");
+        if (simulateFailure)
+            customerAuditRepository.saveWithError(new CustomerAuditEntity(customer.getName(), LocalDateTime.now(), customer.getEmail(), customer.toString()));
         customerAuditRepository.save(new CustomerAuditEntity(customer.getName(), LocalDateTime.now(), customer.getEmail(), customer.toString()));
     }
 
@@ -35,7 +37,8 @@ public class CustomerServiceImpl implements CustomerService {
                                                     final boolean simulateFailure) {
         final CustomerEntity customerEntity = new CustomerEntity(customer);
         customerRepository.save(customerEntity);
-        if (simulateFailure) throw new RuntimeException("Simulated failure");
+        if (simulateFailure)
+            customerAuditRepository.saveWithError(new CustomerAuditEntity(customer.getName(), LocalDateTime.now(), customer.getEmail(), customer.toString()));
         customerAuditRepository.save(new CustomerAuditEntity(customer.getName(), LocalDateTime.now(), customer.getEmail(), customer.toString()));
     }
 
@@ -57,5 +60,24 @@ public class CustomerServiceImpl implements CustomerService {
         customerRepository.save(customerEntity);
         if (simulateFailure) throw new Exception("Checked exception");
         customerAuditRepository.save(new CustomerAuditEntity(customer.getName(), LocalDateTime.now(), customer.getEmail(), customer.toString()));
+    }
+
+    @Override
+    @Transactional
+    public void saveCustomerWithUncheckedExceptionThrown(final Customer customer,
+                                                         final boolean simulateFailure) {
+        final CustomerEntity customerEntity = new CustomerEntity(customer);
+        customerRepository.save(customerEntity);
+        if (simulateFailure) throw new RuntimeException("Unchecked exception");
+        customerAuditRepository.save(new CustomerAuditEntity(customer.getName(), LocalDateTime.now(), customer.getEmail(), customer.toString()));
+    }
+
+    @Override
+    public long getRandomCustomerId() {
+        Set<Long> customerIds = customerRepository.getAllIds();
+        return customerIds
+                .stream()
+                .findAny()
+                .orElseThrow(() -> new RuntimeException("No customers found"));
     }
 }

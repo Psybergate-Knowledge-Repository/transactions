@@ -2,10 +2,8 @@ package com.psybergate.mentoring.transactions.jdbc.service;
 
 import com.psybergate.mentoring.transactions.jdbc.dto.Customer;
 import com.psybergate.mentoring.transactions.jdbc.dto.CustomerAudit;
-import com.psybergate.mentoring.transactions.jdbc.util.DateUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -24,6 +22,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     public static final String AUDIT_INSERT_TEMPLATE = "insert into customer_audit values (nextval('customer_audit_id_seq'), '%s', '%s', '%s', '%s', '%s', '%s')";
 
+    public static final String PROBLEMATIC_AUDIT_INSERT_TEMPLATE = "insert customer_audit values (nextval('customer_audit_id_seq'), '%s', '%s', '%s', '%s', '%s', '%s')";
+
     private static final String RETRIEVE_AUDIT_TEMPLATE = "select * from customer_audit where customer_email = '%s'";
 
     private static final String RETRIEVE_CUSTOMER_TEMPLATE = "select * from customer where email = '%s'";
@@ -38,8 +38,9 @@ public class CustomerServiceImpl implements CustomerService {
                 customer.getLastModified());
     }
 
-    private static String createAuditInsertStatement(final Customer customer) {
-        return String.format(AUDIT_INSERT_TEMPLATE,
+    private static String createAuditInsertStatement(final Customer customer, final boolean simulateFailure) {
+        final String template = simulateFailure ? PROBLEMATIC_AUDIT_INSERT_TEMPLATE : AUDIT_INSERT_TEMPLATE;
+        return String.format(template,
                 customer.getEmail(),
                 customer.getName(),
                 LocalDateTime.now(),
@@ -66,24 +67,21 @@ public class CustomerServiceImpl implements CustomerService {
         try (final Connection connection = dataSource.getConnection();
              final Statement statement = connection.createStatement()) {
             final String customerInsertStatement = createCustomerInsertStatement(customer);
-            final String auditInsertStatement = createAuditInsertStatement(customer);
+            final String auditInsertStatement = createAuditInsertStatement(customer, simulateFailure);
             statement.executeUpdate(customerInsertStatement);
-            if (simulateFailure) throw new RuntimeException("Simulated failure");
             statement.executeUpdate(auditInsertStatement);
         }
     }
 
     @Override
-    @Transactional
     public void saveCustomerWithTransactionBoundary(final Customer customer,
                                                     final boolean simulateFailure) throws SQLException {
         try (final Connection connection = dataSource.getConnection();
              final Statement statement = connection.createStatement()) {
             connection.setAutoCommit(false);
             final String customerInsertStatement = createCustomerInsertStatement(customer);
-            final String auditInsertStatement = createAuditInsertStatement(customer);
+            final String auditInsertStatement = createAuditInsertStatement(customer, simulateFailure);
             statement.executeUpdate(customerInsertStatement);
-            if (simulateFailure) throw new RuntimeException("Simulated failure");
             statement.executeUpdate(auditInsertStatement);
             connection.commit();
         }

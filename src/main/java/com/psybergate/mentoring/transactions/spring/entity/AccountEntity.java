@@ -1,7 +1,9 @@
 package com.psybergate.mentoring.transactions.spring.entity;
 
 import com.psybergate.mentoring.transactions.spring.dto.Account;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Column;
@@ -15,6 +17,8 @@ import java.math.BigDecimal;
         uniqueConstraints = {@UniqueConstraint(columnNames = {"account_number"})})
 @NoArgsConstructor
 @ToString
+@Setter
+@Getter
 public class AccountEntity extends BaseEntity {
 
     @Column(name = "account_number")
