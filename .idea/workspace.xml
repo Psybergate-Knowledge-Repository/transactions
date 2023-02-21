@@ -4,25 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Create service and repository for accounts">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/AccountHistoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/enums/TransactionColour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/repository/AccountHistoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/impl/IsolationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="JDBC and Spring projects">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/TransactionsInJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/TransactionsInJdbc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/AccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/AccountEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/CustomerAuditEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/entity/CustomerAuditEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/repository/CustomerAuditRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/repository/CustomerAuditRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/util/CustomerGeneratorUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/util/RandomGeneratorUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/AtomicityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/impl/AtomicityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +39,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="outputLevel" value="DISABLED" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="C:\Users\RidwaanOmar\.m2\settings_default.xml" />
       </MavenGeneralSettings>
     </option>
@@ -64,36 +55,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>b0c321b2-eb38-4cc1-9094-2b8c32a8a950</source-data-source-id>\n        <source-path>database/&quot;transactions&quot;/schema/&quot;public&quot;</source-path>\n        <target-data-source-id>1f65ff8f-cd7c-451f-ae81-5e04a96b73ab</target-data-source-id>\n        <target-path>schema/&quot;transactions&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/RidwaanOmar/IdeaProjects/Transactions in Spring/JDBC transactions/src/test/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "094cc00891eca98cffd6651c6e07c980",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;\n  &lt;databases&gt;\n    &lt;list&gt;\n      &lt;schema-mapping-item&gt;\n        &lt;source-data-source-id&gt;b0c321b2-eb38-4cc1-9094-2b8c32a8a950&lt;/source-data-source-id&gt;\n        &lt;source-path&gt;database/&amp;quot;transactions&amp;quot;/schema/&amp;quot;public&amp;quot;&lt;/source-path&gt;\n        &lt;target-data-source-id&gt;1f65ff8f-cd7c-451f-ae81-5e04a96b73ab&lt;/target-data-source-id&gt;\n        &lt;target-path&gt;schema/&amp;quot;transactions&amp;quot;&lt;/target-path&gt;\n      &lt;/schema-mapping-item&gt;\n    &lt;/list&gt;\n  &lt;/databases&gt;\n&lt;/schema-mapping&gt;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/RidwaanOmar/IdeaProjects/Transactions in Spring/JDBC transactions/src/test/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;094cc00891eca98cffd6651c6e07c980&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.psybergate.mentoring.transactions.spring.repository" />
@@ -114,6 +106,7 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.psybergate.mentoring.transactions.jdbc.service" />
       <recent name="com.psybergate.mentoring.transactions.spring.service.impl" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -121,10 +114,11 @@
       <recent name="com.psybergate.mentoring.transactions.spring.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.psybergate.mentoring.transactions.spring.service.impl" />
       <recent name="com.psybergate.mentoring.transactions.jdbc.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AtomicityTest (1)">
+  <component name="RunManager" selected="JUnit.AtomicityTest">
     <configuration name="AtomicityTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring" />
       <extension name="coverage">
@@ -155,6 +149,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AtomicityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.AtomicityTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtomicityTest.transactionalSuccessWithTransactionalDeclaration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.AtomicityTest" />
+      <option name="METHOD_NAME" value="transactionalSuccessWithTransactionalDeclaration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jdbc" />
       <extension name="coverage">
@@ -171,32 +196,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsolationTest.dirtyReadAttemptDemo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.IsolationTest" />
-      <option name="METHOD_NAME" value="dirtyReadAttemptDemo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="IsolationTest.dirtyReadAttemptDemoWithRollback" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
+      <module name="jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.impl.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.IsolationTest" />
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.IsolationTest" />
       <option name="METHOD_NAME" value="dirtyReadAttemptDemoWithRollback" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -225,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AtomicityTest (1)" />
         <item itemvalue="JUnit.AtomicityTest" />
+        <item itemvalue="JUnit.AtomicityTest (1)" />
+        <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithTransactionalDeclaration" />
         <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration" />
         <item itemvalue="JUnit.IsolationTest.dirtyReadAttemptDemoWithRollback" />
-        <item itemvalue="JUnit.IsolationTest.dirtyReadAttemptDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +263,9 @@
       <workItem from="1674745814549" duration="1195000" />
       <workItem from="1675154176423" duration="1362000" />
       <workItem from="1675327764633" duration="1199000" />
-      <workItem from="1676708539983" duration="11778000" />
+      <workItem from="1676708539983" duration="16615000" />
+      <workItem from="1676894353042" duration="482000" />
+      <workItem from="1676894889463" duration="14247000" />
     </task>
     <task id="LOCAL-00001" summary="Done with four tests in Spring">
       <created>1673439408886</created>
@@ -333,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673778646730</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="JDBC and Spring projects">
+      <created>1676886162823</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676886162823</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,6 +379,7 @@
     <MESSAGE value="Add test for checked exceptions" />
     <MESSAGE value="Create AccountEntity" />
     <MESSAGE value="Create service and repository for accounts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create service and repository for accounts" />
+    <MESSAGE value="JDBC and Spring projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="JDBC and Spring projects" />
   </component>
 </project>

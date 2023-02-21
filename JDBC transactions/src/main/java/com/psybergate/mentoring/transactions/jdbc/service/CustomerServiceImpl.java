@@ -2,7 +2,7 @@ package com.psybergate.mentoring.transactions.jdbc.service;
 
 import com.psybergate.mentoring.transactions.jdbc.dto.Customer;
 import com.psybergate.mentoring.transactions.jdbc.dto.CustomerAudit;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
@@ -15,21 +15,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
 
     public static final String CUSTOMER_INSERT_TEMPLATE = "insert into customer values (nextval('customer_id_seq'), '%s', '%s', '%s', '%s', '%s', '%s')";
 
+    public static final String MYSQL_CUSTOMER_INSERT_TEMPLATE = "insert into customer(name, surname, email, phone_number, created_date, last_modified) values ('%s', '%s', '%s', '%s', '%s', '%s')";
+
     public static final String AUDIT_INSERT_TEMPLATE = "insert into customer_audit values (nextval('customer_audit_id_seq'), '%s', '%s', '%s', '%s', '%s', '%s')";
+
+    public static final String MYSQL_AUDIT_INSERT_TEMPLATE = "insert into customer_audit(customer_email, modified_by, modified_date, customer, created_date, last_modified) values ('%s', '%s', '%s', '%s', '%s', '%s')";
 
     public static final String PROBLEMATIC_AUDIT_INSERT_TEMPLATE = "insert customer_audit values (nextval('customer_audit_id_seq'), '%s', '%s', '%s', '%s', '%s', '%s')";
 
+    public static final String PROBLEMATIC_MYSQL_AUDIT_INSERT_TEMPLATE = "insert customer_audit(customer_email, modfied_by, modified_date, customer, created_date, last_modified) values ('%s', '%s', '%s', '%s', '%s', '%s')";
     private static final String RETRIEVE_AUDIT_TEMPLATE = "select * from customer_audit where customer_email = '%s'";
 
     private static final String RETRIEVE_CUSTOMER_TEMPLATE = "select * from customer where email = '%s'";
 
     private static String createCustomerInsertStatement(final Customer customer) {
-        return String.format(CUSTOMER_INSERT_TEMPLATE,
+        return String.format(MYSQL_CUSTOMER_INSERT_TEMPLATE,
                 customer.getName(),
                 customer.getSurname(),
                 customer.getEmail(),
@@ -39,7 +43,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     private static String createAuditInsertStatement(final Customer customer, final boolean simulateFailure) {
-        final String template = simulateFailure ? PROBLEMATIC_AUDIT_INSERT_TEMPLATE : AUDIT_INSERT_TEMPLATE;
+        final String template = simulateFailure ? PROBLEMATIC_MYSQL_AUDIT_INSERT_TEMPLATE : MYSQL_AUDIT_INSERT_TEMPLATE;
         return String.format(template,
                 customer.getEmail(),
                 customer.getName(),
@@ -60,6 +64,10 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     private final DataSource dataSource;
+
+    public CustomerServiceImpl(@Qualifier("mySqlDataSource") final DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     @Override
     public void saveCustomerWithoutTransactionBoundary(final Customer customer,

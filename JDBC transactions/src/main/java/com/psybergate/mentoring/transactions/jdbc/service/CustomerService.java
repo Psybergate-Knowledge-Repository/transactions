@@ -2,7 +2,6 @@ package com.psybergate.mentoring.transactions.jdbc.service;
 
 import com.psybergate.mentoring.transactions.jdbc.dto.Customer;
 import com.psybergate.mentoring.transactions.jdbc.dto.CustomerAudit;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
 import java.util.List;
