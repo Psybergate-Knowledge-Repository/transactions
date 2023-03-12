@@ -112,8 +112,8 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customer = null;
         try (final Connection connection = dataSource.getConnection();
              final Statement statement = connection.createStatement()) {
-            final String retrieveAuditStatement = createRetrieveCustomerStatement(email);
-            ResultSet results = statement.executeQuery(retrieveAuditStatement);
+            final String retrieveCustomerStatement = createRetrieveCustomerStatement(email);
+            ResultSet results = statement.executeQuery(retrieveCustomerStatement);
             if (results.next()) {
                 customer = extractCustomer(results);
             }
