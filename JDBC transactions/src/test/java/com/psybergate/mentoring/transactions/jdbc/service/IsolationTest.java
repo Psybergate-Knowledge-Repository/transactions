@@ -35,7 +35,7 @@ public class IsolationTest {
         final Thread secondTranThrd = new Thread(secondTran, "secondTranThrd");
         firstTranThrd.start();
         //Let first 'transaction' flush changes to DB before beginning second. If transaction 2 sees the flushed change, that is a dirty read
-        Thread.sleep(2500);
+        Thread.sleep(3000);
         secondTranThrd.start();
         secondTranThrd.join();
         firstTranThrd.join();
