@@ -71,7 +71,7 @@ public class IsolationTest {
     public void dirtyReadAttemptOnReadCommittedIsolationLevel() {
         final Runnable firstTran = () -> accountService.debitAccountReadCommittedLevel(82762003036L,
                 BigDecimal.valueOf(100),
-                10, //No matter how long we make this wait, transaction 2 always flushes after transaction 1. What does this tell us?
+                5, //No matter how long we make this wait, transaction 2 always flushes after transaction 1. What does this tell us?
                 1, false);
         final Runnable secondTran = () -> accountService.debitAccountReadCommittedLevel(82762003036L,
                 BigDecimal.valueOf(150),
@@ -80,11 +80,10 @@ public class IsolationTest {
         final Thread firstTranThrd = new Thread(firstTran, "firstTranThrd");
         final Thread secondTranThrd = new Thread(secondTran, "secondTranThrd");
         firstTranThrd.start();
-        Thread.sleep(500);
+        Thread.sleep(2500);
         secondTranThrd.start();
         secondTranThrd.join();
         firstTranThrd.join();
-        //There is another anomaly apparent here.
     }
 
     @SneakyThrows
@@ -105,7 +104,6 @@ public class IsolationTest {
         secondTranThrd.start();
         secondTranThrd.join();
         firstTranThrd.join();
-        //There is another anomaly apparent here.
     }
 
     @SneakyThrows

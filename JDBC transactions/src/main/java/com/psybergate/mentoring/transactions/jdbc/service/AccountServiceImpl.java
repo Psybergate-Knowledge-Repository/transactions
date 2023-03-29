@@ -287,7 +287,7 @@ public class AccountServiceImpl implements AccountService {
         try (final Connection connection = dataSource.getConnection()) {
             try {
                 connection.setAutoCommit(false);
-                connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+                connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
                 print("[%s] START TRANSACTION%n", tranIdentifier);
                 List<AccountHistory> accountHistory = findAccountHistoryByAccountNumber(accountNumber, connection);
                 print("[%s] Account history: %s%n", tranIdentifier, accountHistory);
@@ -312,7 +312,7 @@ public class AccountServiceImpl implements AccountService {
         try (final Connection connection = dataSource.getConnection()) {
             try {
                 connection.setAutoCommit(false);
-                connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
+                connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
                 print("[%s] START TRANSACTION%n", tranIdentifier);
                 List<AccountHistory> accountHistory = findAccountHistoryByAccountNumber(accountNumber, connection);
                 print("[%s] Account history: %s%n", tranIdentifier, accountHistory);
