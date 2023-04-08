@@ -8,6 +8,7 @@ import com.psybergate.mentoring.transactions.spring.repository.CustomerRepositor
 import com.psybergate.mentoring.transactions.spring.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
@@ -53,7 +54,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void saveCustomerWithCheckedExceptionThrown(final Customer customer,
                                                        final boolean simulateFailure) throws Exception {
         final CustomerEntity customerEntity = new CustomerEntity(customer);

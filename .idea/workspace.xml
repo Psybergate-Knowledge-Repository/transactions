@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="adjust timings">
+    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Fix isolation levels">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/test/java/com/psybergate/mentoring/transactions/jdbc/service/IsolationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/test/java/com/psybergate/mentoring/transactions/jdbc/service/IsolationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/dto/CustomerAudit.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/dto/CustomerAudit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/psybergate/mentoring/transactions/spring/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/impl/AtomicityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/psybergate/mentoring/transactions/spring/service/impl/AtomicityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +39,6 @@
         <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="C:\Users\RidwaanOmar\.m2\settings_default.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="2IoHJobexhMP2lHvt1H1zEmsr5A" />
@@ -115,82 +112,82 @@
       <recent name="com.psybergate.mentoring.transactions.spring.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IsolationTest.dirtyReadAttemptOnReadCommittedIsolationLevel">
-    <configuration name="IsolationTest.dirtyReadAttemptOnReadCommittedIsolationLevel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdbc" />
+  <component name="RunManager" selected="JUnit.AtomicityTest.checkedExceptionThrownWithoutRollbackForDeclared">
+    <configuration name="AtomicityTest.checkedExceptionThrownWithoutRollbackForDeclared" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.IsolationTest" />
-      <option name="METHOD_NAME" value="dirtyReadAttemptOnReadCommittedIsolationLevel" />
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.AtomicityTest" />
+      <option name="METHOD_NAME" value="checkedExceptionThrownWithoutRollbackForDeclared" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsolationTest.dirtyReadAttemptOnReadCommittedIsolationLevelWithRollback" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdbc" />
+    <configuration name="AtomicityTest.transactionalFailureWithTransactionalDeclaration (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.IsolationTest" />
-      <option name="METHOD_NAME" value="dirtyReadAttemptOnReadCommittedIsolationLevelWithRollback" />
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.AtomicityTest" />
+      <option name="METHOD_NAME" value="transactionalFailureWithTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsolationTest.dirtyReadDemoWithRollback" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdbc" />
+    <configuration name="AtomicityTest.transactionalFailureWithoutTransactionalDeclaration (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.IsolationTest" />
-      <option name="METHOD_NAME" value="dirtyReadDemoWithRollback" />
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.AtomicityTest" />
+      <option name="METHOD_NAME" value="transactionalFailureWithoutTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsolationTest.nonRepeatableReadAttemptUnderRepeatableReadIsolation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdbc" />
+    <configuration name="AtomicityTest.transactionalSuccessWithTransactionalDeclaration (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.IsolationTest" />
-      <option name="METHOD_NAME" value="nonRepeatableReadAttemptUnderRepeatableReadIsolation" />
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.AtomicityTest" />
+      <option name="METHOD_NAME" value="transactionalSuccessWithTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsolationTest.nonRepeatableReadDemo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdbc" />
+    <configuration name="AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.IsolationTest" />
-      <option name="METHOD_NAME" value="nonRepeatableReadDemo" />
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.AtomicityTest" />
+      <option name="METHOD_NAME" value="transactionalSuccessWithoutTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -218,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IsolationTest.dirtyReadAttemptOnReadCommittedIsolationLevel" />
-        <item itemvalue="JUnit.IsolationTest.nonRepeatableReadAttemptUnderRepeatableReadIsolation" />
-        <item itemvalue="JUnit.IsolationTest.nonRepeatableReadDemo" />
-        <item itemvalue="JUnit.IsolationTest.dirtyReadAttemptOnReadCommittedIsolationLevelWithRollback" />
-        <item itemvalue="JUnit.IsolationTest.dirtyReadDemoWithRollback" />
+        <item itemvalue="JUnit.AtomicityTest.checkedExceptionThrownWithoutRollbackForDeclared" />
+        <item itemvalue="JUnit.AtomicityTest.transactionalFailureWithTransactionalDeclaration (1)" />
+        <item itemvalue="JUnit.AtomicityTest.transactionalFailureWithoutTransactionalDeclaration (1)" />
+        <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithTransactionalDeclaration (1)" />
+        <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +252,10 @@
       <workItem from="1679217576186" duration="11220000" />
       <workItem from="1679298095331" duration="27366000" />
       <workItem from="1679487180405" duration="1837000" />
-      <workItem from="1679561812041" duration="21312000" />
+      <workItem from="1679561812041" duration="40717000" />
+      <workItem from="1680438593412" duration="419000" />
+      <workItem from="1680440217558" duration="347000" />
+      <workItem from="1680614153714" duration="431000" />
     </task>
     <task id="LOCAL-00001" summary="Done with four tests in Spring">
       <created>1673439408886</created>
@@ -369,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679821794402</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fix isolation levels">
+      <created>1680086138789</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680086138789</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +409,7 @@
     <MESSAGE value="Move isolation tests to jdbc project" />
     <MESSAGE value="Complete upto phantomRead" />
     <MESSAGE value="adjust timings" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust timings" />
+    <MESSAGE value="Fix isolation levels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix isolation levels" />
   </component>
 </project>

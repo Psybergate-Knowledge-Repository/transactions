@@ -2,11 +2,13 @@ package com.psybergate.mentoring.transactions.jdbc.dto;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@ToString
 public class CustomerAudit extends BaseEntity{
 
     public CustomerAudit(final String modifiedBy,
