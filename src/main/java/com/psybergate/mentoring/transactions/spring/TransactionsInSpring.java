@@ -1,6 +1,5 @@
 package com.psybergate.mentoring.transactions.spring;
 
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -18,9 +17,9 @@ public class TransactionsInSpring {
     public DataSource dataSource(){
         return DataSourceBuilder
                 .create()
-                .driverClassName("org.postgresql.Driver")
-                .url("jdbc:postgresql://localhost:5432/transactions?tcpKeepAlive=true")
-                .username("postgres")
+                .driverClassName("com.mysql.jdbc.Driver")
+                .url("jdbc:mysql://localhost:3306/transactions?tcpKeepAlive=true")
+                .username("root")
                 .password("admin")
                 .build();
     }
