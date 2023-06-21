@@ -32,6 +32,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     private static final String RETRIEVE_CUSTOMER_TEMPLATE = "select * from customer where email = '%s'";
 
+    private static final String MYSQL_CUSTOMER_UPDATE_NAME_TEMPLATE = "update customer set name = '%s' where email = '%s'";
+
     private static String createCustomerInsertStatement(final Customer customer) {
         return String.format(MYSQL_CUSTOMER_INSERT_TEMPLATE,
                 customer.getName(),
@@ -40,6 +42,12 @@ public class CustomerServiceImpl implements CustomerService {
                 customer.getPhoneNumber(),
                 customer.getCreatedDate(),
                 customer.getLastModified());
+    }
+
+    private static String createCustomerUpdateNameStatement(Customer customer) {
+        return String.format(MYSQL_CUSTOMER_UPDATE_NAME_TEMPLATE,
+                customer.getName(),
+                customer.getEmail());
     }
 
     private static String createAuditInsertStatement(final Customer customer, final boolean simulateFailure) {
@@ -83,15 +91,20 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void saveCustomerWithTransactionBoundary(final Customer customer,
-                                                    final boolean simulateFailure) throws SQLException {
-        try (final Connection connection = dataSource.getConnection();
-             final Statement statement = connection.createStatement()) {
-            connection.setAutoCommit(false);
-            final String customerInsertStatement = createCustomerInsertStatement(customer);
-            final String auditInsertStatement = createAuditInsertStatement(customer, simulateFailure);
-            statement.executeUpdate(customerInsertStatement);
-            statement.executeUpdate(auditInsertStatement);
-            connection.commit();
+                                                    final boolean simulateFailure) {
+        try (final Connection connection = dataSource.getConnection()) {
+            try (final Statement statement = connection.createStatement()) {
+                connection.setAutoCommit(false);
+                final String customerInsertStatement = createCustomerInsertStatement(customer);
+                final String auditInsertStatement = createAuditInsertStatement(customer, simulateFailure);
+                statement.executeUpdate(customerInsertStatement);
+                statement.executeUpdate(auditInsertStatement);
+                connection.commit();
+            } catch (Exception e) {
+                connection.rollback();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -121,6 +134,26 @@ public class CustomerServiceImpl implements CustomerService {
         return customer;
     }
 
+    @Override
+    public void updateCustomerName(final String customerEmail,
+                                   final String name,
+                                   final boolean simulateFailure) {
+        try {
+            final Connection connection = dataSource.getConnection();
+            final Statement statement = connection.createStatement();
+            connection.setAutoCommit(false);
+            final Customer customer = findCustomerByEmail(customerEmail);
+            customer.setName(name);
+            final String customerInsertStatement = createCustomerUpdateNameStatement(customer);
+            final String auditInsertStatement = createAuditInsertStatement(customer, simulateFailure);
+            statement.executeUpdate(customerInsertStatement);
+            statement.executeUpdate(auditInsertStatement);
+            connection.commit();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private Customer extractCustomer(final ResultSet results) throws SQLException {
         final LocalDateTime createdDate = results.getTimestamp("created_date").toLocalDateTime();
         final LocalDateTime lastModified = results.getTimestamp("last_modified").toLocalDateTime();
@@ -138,7 +171,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     private List<CustomerAudit> extractAudits(final ResultSet results) throws SQLException {
         final List<CustomerAudit> audits = new ArrayList<>();
-        while (results.next()){
+        while (results.next()) {
             final String modifiedBy = results.getString("modified_by");
             final LocalDateTime modifiedDate = results.getTimestamp("modified_date").toLocalDateTime();
             final String customerEmail = results.getString("customer_email");
