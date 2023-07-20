@@ -144,9 +144,9 @@ public class CustomerServiceImpl implements CustomerService {
             connection.setAutoCommit(false);
             final Customer customer = findCustomerByEmail(customerEmail);
             customer.setName(name);
-            final String customerInsertStatement = createCustomerUpdateNameStatement(customer);
+            final String customerUpdateStatement = createCustomerUpdateNameStatement(customer);
             final String auditInsertStatement = createAuditInsertStatement(customer, simulateFailure);
-            statement.executeUpdate(customerInsertStatement);
+            statement.executeUpdate(customerUpdateStatement);
             statement.executeUpdate(auditInsertStatement);
             connection.commit();
         } catch (SQLException e) {

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Create method to demonstrate lack of rollback">
+    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Updated slides">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JDBC transactions/src/test/java/com/psybergate/mentoring/transactions/jdbc/service/AtomicityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC transactions/src/test/java/com/psybergate/mentoring/transactions/jdbc/service/AtomicityTest.java" afterDir="false" />
     </list>
@@ -263,7 +262,13 @@
       <workItem from="1680440217558" duration="347000" />
       <workItem from="1680614153714" duration="431000" />
       <workItem from="1686662462636" duration="1239000" />
-      <workItem from="1686902178105" duration="23017000" />
+      <workItem from="1686902178105" duration="31961000" />
+      <workItem from="1687505991875" duration="2359000" />
+      <workItem from="1687763952798" duration="1819000" />
+      <workItem from="1688984551776" duration="596000" />
+      <workItem from="1689311672322" duration="1259000" />
+      <workItem from="1689410805916" duration="1312000" />
+      <workItem from="1689658646430" duration="6496000" />
     </task>
     <task id="LOCAL-00001" summary="Done with four tests in Spring">
       <created>1673439408886</created>
@@ -384,7 +389,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680086138789</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Create method to demonstrate lack of rollback">
+      <created>1687334982698</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1687334982698</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Updated slides">
+      <created>1687503415899</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1687503415900</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,15 +450,16 @@
     <MESSAGE value="adjust timings" />
     <MESSAGE value="Fix isolation levels" />
     <MESSAGE value="Create method to demonstrate lack of rollback" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create method to demonstrate lack of rollback" />
+    <MESSAGE value="Updated slides" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated slides" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JDBC transactions/src/main/java/com/psybergate/mentoring/transactions/jdbc/service/CustomerServiceImpl.java</url>
-          <line>152</line>
-          <option name="timeStamp" value="1" />
+          <line>153</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
