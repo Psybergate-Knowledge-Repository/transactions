@@ -8,7 +8,6 @@ import com.psybergate.mentoring.transactions.spring.repository.CustomerRepositor
 import com.psybergate.mentoring.transactions.spring.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
@@ -71,6 +70,12 @@ public class CustomerServiceImpl implements CustomerService {
         customerRepository.save(customerEntity);
         if (simulateFailure) throw new RuntimeException("Unchecked exception");
         customerAuditRepository.save(new CustomerAuditEntity(customer.getName(), LocalDateTime.now(), customer.getEmail(), customer.toString()));
+    }
+
+    @Override
+    public void saveCustomerDelegateToTransactional(final Customer customer,
+                                                    final boolean simulateFailure) {
+        saveCustomerWithTransactionBoundary(customer, simulateFailure);
     }
 
     @Override
