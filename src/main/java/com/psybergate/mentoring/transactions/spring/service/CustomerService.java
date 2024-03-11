@@ -11,6 +11,9 @@ public interface CustomerService {
 
     void saveCustomerWithoutTransactionBoundary(Customer customer, final boolean simulateFailure);
 
+    void saveCustomerDelegateToTransactional(Customer customer,
+                                             boolean simulateFailure);
+
     @Transactional
     void saveCustomerWithTransactionBoundary(Customer customer, final boolean simulateFailure);
 

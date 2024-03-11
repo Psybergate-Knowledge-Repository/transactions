@@ -53,11 +53,7 @@ public class AtomicityTest {
     @Test
     public void transactionalFailureWithoutTransactionalDeclaration() throws SQLException {
         final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
-        try {
-            customerService.saveCustomerWithoutTransactionBoundary(generatedCustomer, true);
-        } catch (Exception e) {
-            // Simulated failure
-        }
+        customerService.saveCustomerWithoutTransactionBoundary(generatedCustomer, true);
         List<CustomerAudit> customerAudits = customerService.findAuditsByCustomerEmail(generatedCustomer.getEmail());
         final Customer customer = customerService.findCustomerByEmail(generatedCustomer.getEmail());
         // Expecting customer to be saved, but not audit. This is problematic and illustrates the value of transactions
@@ -69,17 +65,22 @@ public class AtomicityTest {
     @Test
     public void transactionalFailureWithTransactionalDeclaration() throws SQLException {
         final Customer generatedCustomer = CustomerGeneratorUtil.generateRandomCustomer();
-        try {
-            customerService.saveCustomerWithTransactionBoundary(generatedCustomer, true);
-        } catch (Exception e) {
-            // Simulated failure
-        }
+        customerService.saveCustomerWithTransactionBoundary(generatedCustomer, true);
         List<CustomerAudit> customerAudits = customerService.findAuditsByCustomerEmail(generatedCustomer.getEmail());
         final Customer customer = customerService.findCustomerByEmail(generatedCustomer.getEmail());
         // Expecting nothing to be saved. The transaction should be rolled back. This is what we want. All or nothing
         if (!customerAudits.isEmpty() || customer != null) fail("customer or audit was saved");
         System.out.println(customerAudits);
         System.out.println(customer);
+    }
+
+    @Test
+    public void failureWithoutRollbackWhatHappens() {
+        try {
+            customerService.updateCustomerName("ridwaanomar7@gmail.com", "NEWNAME!", true);
+        } catch (Exception e) {
+            // Squash for demo purposes
+        }
     }
 
 }

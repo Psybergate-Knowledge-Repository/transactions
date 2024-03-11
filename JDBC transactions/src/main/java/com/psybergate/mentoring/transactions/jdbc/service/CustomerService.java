@@ -15,4 +15,6 @@ public interface CustomerService {
     List<CustomerAudit> findAuditsByCustomerEmail(String email) throws SQLException;
 
     Customer findCustomerByEmail(String email) throws SQLException;
+
+    void updateCustomerName(String customerEmail, String name, boolean simulateFailure);
 }
