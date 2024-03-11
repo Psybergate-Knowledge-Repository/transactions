@@ -34,10 +34,26 @@ public class SpringTests {
         }
         List<CustomerAuditEntity> customerAudits = customerService.findAuditsByCustomerEmail(generatedCustomer.getEmail());
         final CustomerEntity customer = customerService.findCustomerByEmail(generatedCustomer.getEmail());
-        // Expecting nothing to be saved. The transaction should be rolled back. This is what we want. All or nothing
         if (!customerAudits.isEmpty() || customer != null) fail("customer or audit was saved");
         System.out.println(customerAudits);
         System.out.println(customer);
     }
 
+    /*Same outcome as AtomicityTest#transactionalFailureWithoutTransactionalDeclaration test*/
+    @Test
+    public void checkedExceptionThrownWithoutRollbackForDeclared(){
+        final Customer generatedCustomer = RandomGeneratorUtil.generateRandomCustomer();
+        try {
+            customerService.saveCustomerWithCheckedExceptionThrown(generatedCustomer, true);
+        } catch (Exception e) {
+            //Simulated failure
+        }
+        List<CustomerAuditEntity> customerAudits = customerService.findAuditsByCustomerEmail(generatedCustomer.getEmail());
+        final CustomerEntity customer = customerService.findCustomerByEmail(generatedCustomer.getEmail());
+        /*Expecting customer to be saved, but not audit. This is problematic and illustrates that
+         transactionality can be broken down by mishandling checked exceptions*/
+        if (!customerAudits.isEmpty() || customer == null) fail("customer was not saved or audit was saved");
+        System.out.println(customerAudits);
+        System.out.println(customer);
+    }
 }
