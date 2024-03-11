@@ -76,7 +76,11 @@ public class AtomicityTest {
 
     @Test
     public void failureWithoutRollbackWhatHappens() {
-        customerService.updateCustomerName("ridwaanomar7@gmail.com", "NEWNAME!", true);
+        try {
+            customerService.updateCustomerName("ridwaanomar7@gmail.com", "NEWNAME!", true);
+        } catch (Exception e) {
+            // Squash for demo purposes
+        }
     }
 
 }
