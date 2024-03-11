@@ -54,12 +54,12 @@ public class CustomerServiceProxyUsingJdbcTransactions implements CustomerServic
     }
 
     @Override
-    public void saveCustomerWithCheckedExceptionThrown(Customer customer, boolean simulateFailure) throws Exception {
+    public void saveCustomerWithCheckedExceptionThrown(Customer customer, boolean simulateFailure) {
 
     }
 
     @Override
-    public void saveCustomerWithUncheckedExceptionThrown(Customer customer, boolean simulateFailure) throws Exception {
+    public void saveCustomerWithUncheckedExceptionThrown(Customer customer, boolean simulateFailure) {
 
     }
 
