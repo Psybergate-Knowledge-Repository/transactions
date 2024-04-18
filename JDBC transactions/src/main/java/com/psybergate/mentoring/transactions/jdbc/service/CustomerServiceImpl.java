@@ -86,6 +86,8 @@ public class CustomerServiceImpl implements CustomerService {
             final String auditInsertStatement = createAuditInsertStatement(customer, simulateFailure);
             statement.executeUpdate(customerInsertStatement);
             statement.executeUpdate(auditInsertStatement);
+        }  catch (Exception e) {
+            System.out.println("Simulated error");;
         }
     }
 

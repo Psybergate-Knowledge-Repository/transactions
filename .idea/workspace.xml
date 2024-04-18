@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Demo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="409578c1-37ec-4478-a305-fbf0ff4b6e3a" name="Changes" comment="Demo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="my-branch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,39 +48,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;\n  &lt;databases&gt;\n    &lt;list&gt;\n      &lt;schema-mapping-item&gt;\n        &lt;source-data-source-id&gt;b0c321b2-eb38-4cc1-9094-2b8c32a8a950&lt;/source-data-source-id&gt;\n        &lt;source-path&gt;database/&amp;quot;transactions&amp;quot;/schema/&amp;quot;public&amp;quot;&lt;/source-path&gt;\n        &lt;target-data-source-id&gt;1f65ff8f-cd7c-451f-ae81-5e04a96b73ab&lt;/target-data-source-id&gt;\n        &lt;target-path&gt;schema/&amp;quot;transactions&amp;quot;&lt;/target-path&gt;\n      &lt;/schema-mapping-item&gt;\n    &lt;/list&gt;\n  &lt;/databases&gt;\n&lt;/schema-mapping&gt;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/RidwaanOmar/IdeaProjects/Transactions in Spring&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;8442c19f847079c28cda0f5040d1b4d9&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AtomicityTest.transactionalFailureWithoutTransactionalDeclaration.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "my-branch",
+    "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>b0c321b2-eb38-4cc1-9094-2b8c32a8a950</source-data-source-id>\n        <source-path>database/&quot;transactions&quot;/schema/&quot;public&quot;</source-path>\n        <target-data-source-id>1f65ff8f-cd7c-451f-ae81-5e04a96b73ab</target-data-source-id>\n        <target-path>schema/&quot;transactions&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/RidwaanOmar/IdeaProjects/Transactions in Spring",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "8442c19f847079c28cda0f5040d1b4d9",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.psybergate.mentoring.transactions.jdbc.exception" />
@@ -117,22 +116,7 @@
       <recent name="com.psybergate.mentoring.transactions.spring.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AtomicityTest">
-    <configuration name="AtomicityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.AtomicityTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AtomicityTest.transactionalFailureWithoutTransactionalDeclaration">
     <configuration name="AtomicityTest.transactionalFailureWithTransactionalDeclaration (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring" />
       <extension name="coverage">
@@ -149,16 +133,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AtomicityTest.transactionalFailureWithoutTransactionalDeclaration (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
+    <configuration name="AtomicityTest.transactionalFailureWithTransactionalDeclaration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.psybergate.mentoring.transactions.spring.service.impl.*" />
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.spring.service.impl.AtomicityTest" />
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.AtomicityTest" />
+      <option name="METHOD_NAME" value="transactionalFailureWithTransactionalDeclaration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtomicityTest.transactionalFailureWithoutTransactionalDeclaration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.psybergate.mentoring.transactions.jdbc.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.psybergate.mentoring.transactions.jdbc.service" />
+      <option name="MAIN_CLASS_NAME" value="com.psybergate.mentoring.transactions.jdbc.service.AtomicityTest" />
       <option name="METHOD_NAME" value="transactionalFailureWithoutTransactionalDeclaration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -219,11 +219,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AtomicityTest.transactionalFailureWithoutTransactionalDeclaration" />
+        <item itemvalue="JUnit.AtomicityTest.transactionalFailureWithTransactionalDeclaration" />
         <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithTransactionalDeclaration (1)" />
         <item itemvalue="JUnit.AtomicityTest.transactionalSuccessWithoutTransactionalDeclaration (1)" />
         <item itemvalue="JUnit.AtomicityTest.transactionalFailureWithTransactionalDeclaration (1)" />
-        <item itemvalue="JUnit.AtomicityTest.transactionalFailureWithoutTransactionalDeclaration (1)" />
-        <item itemvalue="JUnit.AtomicityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -399,7 +399,15 @@
       <option name="project" value="LOCAL" />
       <updated>1680946618416</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Create PropagationTests">
+      <option name="closed" value="true" />
+      <created>1713459267949</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713459267949</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,6 +454,7 @@
     <MESSAGE value="adjust timings" />
     <MESSAGE value="Fix isolation levels" />
     <MESSAGE value="Running changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Running changes" />
+    <MESSAGE value="Create PropagationTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create PropagationTests" />
   </component>
 </project>
