@@ -1,4 +1,4 @@
-package com.psybergate.mentoring.transactions.spring.service.impl;
+package com.psybergate.mentoring.transactions.spring.service.impl.proxies;
 
 import com.psybergate.mentoring.transactions.spring.dto.Customer;
 import com.psybergate.mentoring.transactions.spring.entity.CustomerAuditEntity;
